@@ -1,0 +1,17 @@
+view "REPORTING"."V_SALES_ORDERS" {
+  body = """-
+
+SELECT
+    o.ORDER_ID,
+    o.ORDER_DATE,
+    o.CUSTOMER_NAME,
+    o.PRODUCT_NAME,
+    o.CATEGORY,
+    o.QUANTITY,
+    o.UNIT_PRICE,
+    o.QUANTITY * o.UNIT_PRICE AS TOTAL_AMOUNT,
+    o.REGION
+FROM SALES.SALES_ORDERS o;
+"""
+}
+

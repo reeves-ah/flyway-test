@@ -1,0 +1,8 @@
+{
+  "database-engine": "snowflake",
+  "database-properties": {
+    "database-version": "10.36.101",
+    "model-version": "0.2"
+  },
+  "model-format": "rgmf"
+}

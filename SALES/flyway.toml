@@ -1,0 +1,30 @@
+databaseType = "Snowflake"
+id = "c0ac2b55-a8a9-4771-8379-6cdd3e3b401b"
+name = "SALES"
+
+[flyway]
+callbackLocations = [ "filesystem:callbacks" ]
+locations = [ "filesystem:migrations" ]
+mixed = true
+outOfOrder = true
+schemaModelLocation = "schema-model"
+validateMigrationNaming = true
+
+[flywayDesktop]
+enableMigrations = true
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+
+  [flywayDesktop.generate]
+  undoScripts = false
+
+[redgateCompare]
+filterFile = "filter.rgf"
+
+[environments.Sales-DB]
+url = "jdbc:snowflake://ktbccde-ah-dev.snowflakecomputing.com/?db=SALES_DB&warehouse=WH_FLYWAY_XSM&role=FNR_FLYWAY&JDBC_QUERY_RESULT_FORMAT=JSON"
+displayName = "Sales-DB-Dev"
+
+[environments.Sales-DB-Local]
+url = "jdbc:snowflake://ktbccde-ah-dev.snowflakecomputing.com/?db=SALES_DB_DSM_111&warehouse=WH_FLYWAY_XSM&role=FNR_FLYWAY&JDBC_QUERY_RESULT_FORMAT=JSON"
+displayName = "Sales-DB-Local"

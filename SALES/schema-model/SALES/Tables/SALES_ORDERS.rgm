@@ -1,0 +1,40 @@
+table "SALES"."SALES_ORDERS" {
+  columns = (
+    column "ORDER_ID" {
+      type = NUMBER(10,0)
+      null = NOT NULL
+    }
+    column "ORDER_DATE" {
+      type = DATE
+      null = NOT NULL
+    }
+    column "CUSTOMER_NAME" {
+      type = VARCHAR(100)
+      null = NOT NULL
+    }
+    column "PRODUCT_NAME" {
+      type = VARCHAR(100)
+      null = NOT NULL
+    }
+    column "CATEGORY" {
+      type = VARCHAR(50)
+      null = NOT NULL
+    }
+    column "QUANTITY" {
+      type = NUMBER(10,0)
+      null = NOT NULL
+    }
+    column "UNIT_PRICE" {
+      type = NUMBER(12,2)
+      null = NOT NULL
+    }
+    column "REGION" {
+      type = VARCHAR(20)
+      null = NOT NULL
+    }
+    column "CREATED_AT" {
+      type = TIMESTAMP_NTZ
+    }
+  )
+}
+
